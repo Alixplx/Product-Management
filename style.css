@@ -1,0 +1,207 @@
+* {
+
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+
+    --light-bg: #fff;
+    --light-text-color: #000;
+    --light-btn-bg: rgb(182, 51, 51);
+
+    --dark-bg: #222;
+    --dark-text-color: #fff;
+    --dark-btn-bg: #2097e1;
+
+    --primaryBgColor: #222;
+    --primaryTextColor: #fff;
+}
+
+body {
+
+    background-color: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+
+body.active {
+
+    background-color: #eaeaea;
+    color: var(--light-text-color);
+}
+
+.crud {
+
+    width: 80%;
+    margin: auto;
+}
+
+.head {
+
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+
+    font-weight: bold;
+}
+
+#toggle {
+
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: var(--primaryBgColor);
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.5),
+                inset 0 8px 8px rgba(0, 0, 0, 0.5),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.5);
+}
+
+#toggle.active {
+
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+                inset 0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicator {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    cursor: pointer;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0 4px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transition: 0.5s;            
+}
+
+#toggle.active .indicator {
+
+    left: 50px;
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+                inset 0 4px 4px rgba(255, 255, 255, 1),
+                inset 0 -4px 4px rgba(255, 255, 255, 1);
+}
+
+input {
+
+    width: 100%;
+    height: 25px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    background-color: #111;
+    margin: 4px 0;
+    color: white;
+    border-radius: 4px;
+}
+
+input::placeholder {
+
+    color: rgb(235, 214, 60);
+}
+
+input:focus {
+
+    background: #000;
+    transform: scale(1.1);
+}
+
+.price input {
+
+    width: 20%;
+}
+
+#total {
+
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+#total::before {
+
+    content: 'Total : ';
+}
+
+button {
+
+    width: 100%;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--dark-btn-bg);
+    color: white;
+    border-radius: 12px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+button.active {
+
+    background-color: var(--light-btn-bg);
+}
+
+button:hover {
+
+    background-color: #0d72b0;
+    letter-spacing: 1px;
+}
+
+.btnSearch {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnSearch button {
+
+    width: 45%;
+}
+
+#deleteAll {
+
+    margin: 20px 0;
+}
+
+table {
+
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #111;
+    border-radius: 12px;
+    padding: 10px;
+    color: #eaeaea;
+}
+
+table th {
+
+    text-transform: uppercase;
+}
+
+th, td {
+
+    padding: 5px;
+}
